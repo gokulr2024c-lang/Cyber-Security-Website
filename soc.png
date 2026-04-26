@@ -1,0 +1,140 @@
+<body>
+
+<header class="header">
+  <div class="brand">JAG</div>
+  <link rel="stylesheet" href="styles2.css">
+  <nav>
+    <a href="index.html">Main page</a>
+  </nav>
+</header>
+<br><br>
+<div id="live-clock">
+  <span id="clock-time">00:00:00</span>
+</div>
+
+<section class="cont">
+  <div>
+    <a href="#soc">SOC</a>
+  </div>
+  <div>
+    <a href="#endpoint">Endpoint Security</a>
+  </div>
+  <div>
+    <a href="#cloud">Cloud Security</a>
+  </div>
+</section>
+
+<!-- SOC -->
+<section id="soc" class="info-section" style="background: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);">
+  <div class="soc-flex">
+    <div class="soc-content">
+      <h2>Security Operations Center (SOC)</h2>
+      <p>
+        A Security Operations Center (SOC) is a centralized function responsible for
+        continuously monitoring, detecting, analyzing, and responding to cybersecurity
+        threats across an organization.
+        <br><br>
+        SOC teams work with SIEM systems, threat intelligence, log analysis, and incident
+        response tools to identify attacks such as malware, data breaches, insider threats,
+        and network intrusions in real time.
+        <br><br>
+        <b>SOC exists to reduce detection time, contain damage, and maintain security visibility 24/7.</b>
+      </p>
+    </div>
+    <div class="soc-image">
+      <img src="soc.png" alt="SOC monitoring dashboard illustration">
+    </div>
+
+  </div>
+</section>
+
+
+<section id="endpoint" class="info-section" style="background: linear-gradient(to bottom right, #E3FDF5, #FFE6FA);">
+  <div class="soc-flex">
+
+    <div class="soc-image">
+      <img src="endpoint.png" alt="Endpoint security device protection illustration">
+    </div>
+
+    <!-- LEFT: CONTENT (70%) -->
+    <div class="soc-content">
+      <h2>Endpoint Security</h2>
+      <p>
+        Endpoint Security focuses on protecting devices such as laptops, desktops,
+        servers, and mobile devices that connect to an organization’s network.
+        <br><br>
+        Because endpoints are directly used by humans, they are frequent targets for
+        phishing, malware, ransomware, and credential theft. Endpoint security solutions
+        include antivirus, EDR/XDR, behavioral analysis, device control, and disk
+        encryption.
+        <br><br>
+        <b>The objective is to prevent compromised devices from becoming entry points
+        into the enterprise network.</b>
+      </p>
+    </div>
+
+    <!-- RIGHT: IMAGE (30%) -->
+    
+  </div>
+</section>
+
+
+<!-- CLOUD SECURITY -->
+<section id="cloud" class="info-section" style="background: linear-gradient(to bottom right, #FEF3C7, #FCA5A5);">
+  <div class="soc-flex">
+
+    <!-- LEFT: CONTENT (70%) -->
+    <div class="soc-content">
+      <h2>Cloud Security</h2>
+      <p>
+        Cloud Security refers to the technologies, controls, and policies used to
+        protect applications, data, identities, and workloads running in cloud
+        environments such as AWS, Azure, and Google Cloud.
+        <br><br>
+        It includes identity and access management (IAM), encryption, secure network
+        design, workload protection, container security, and continuous configuration
+        monitoring.
+        <br><br>
+        Cloud security operates under a shared responsibility model: cloud providers
+        secure the infrastructure, while customers are responsible for securing data,
+        identities, and configurations.
+        <br><br>
+        <b>Cloud Security enables scalability without losing visibility or control.</b>
+      </p>
+    </div>
+
+    <!-- RIGHT: IMAGE (30%) -->
+    <div class="soc-image">
+      <img src="cloud.png" alt="Cloud security architecture illustration">
+    </div>
+
+  </div>
+</section>
+
+<hr>
+<h4>Grafana:<sub>our associate partner</sub></h4>
+<iframe 
+  src="https://play.grafana.org/d/000000012/grafana-play-home"
+  width="100%"
+  height="420"
+  style="border-radius:16px;border:none;"
+  loading="lazy">
+</iframe>
+<br><hr>
+<section style="text-align:center;">
+  <p>What Grafana actually is
+
+Grafana is an open-source visualization and observability platform.
+It does not collect data by itself. <br>It connects to data sources, queries them, and turns the results into dashboards, charts, and alerts.
+<br>
+<i><q>Think of Grafana as the display + alert layer, not the data producer.</q></i></p>
+</section>
+<script>
+    function updateClock() {
+      document.getElementById("clock-time").innerText =
+        new Date().toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
